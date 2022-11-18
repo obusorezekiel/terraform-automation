@@ -15,9 +15,10 @@ preferred_number_of_public_subnets = 2
 preferred_number_of_private_subnets = 4
 
 tags = {
+  Environment      = "production"
   Owner-Email     = "ezekiel.umesi@gmail.com"
   Managed-By      = "Terraform"
-  Billing-Account = "1234567890"
+  Billing-Account = "353928175117"
 }
 
 ami = "ami-0149b2da6ceec4bb0"
