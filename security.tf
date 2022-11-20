@@ -38,7 +38,7 @@ resource "aws_security_group" "ext-alb-sg" {
 
 # security group for bastion, to allow access into the bastion host from you IP
 resource "aws_security_group" "bastion_sg" {
-  name        = "vpc_web_sg"
+  name        = "bastion_sg"
   vpc_id      = aws_vpc.main.id
   description = "Allow incoming HTTP connections."
 
@@ -136,7 +136,7 @@ resource "aws_security_group_rule" "inbound-ialb-https" {
 
 # security group for webservers, to have access only from the internal load balancer and bastion instance
 resource "aws_security_group" "webserver-sg" {
-  name   = "my-asg-sg"
+  name   = "webserver-sg"
   vpc_id = aws_vpc.main.id
 
   egress {
